@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var mTemp: UILabel!
     @IBOutlet weak var mPlay: UIButton!
     @IBOutlet weak var mRestart: UIButton!
+    @IBOutlet weak var jellyfishText: UILabel!
+    @IBOutlet weak var bascketballText: UILabel!
     let configuration = ARWorldTrackingConfiguration()
     
     var temp = Each(1).seconds
@@ -37,7 +39,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playAction(_ sender: Any) {
-        AppData.enemiesCounter = 0
+        AppData.enemiesCounter[0] = 0
+        AppData.enemiesCounter[1] = 0
+        
         self.addNode()
         self.setTime()
         
@@ -68,8 +72,7 @@ class ViewController: UIViewController {
         if !hitTest.isEmpty{
             let node = hitTest.first!.node
             if AppData.name == node.name{
-                AppData.enemiesCounter += 1
-                print(AppData.enemies)
+                AppData.enemiesCounter[AppData.indexEnemy] += 1
                 if node.animationKeys.isEmpty, node.name != nil{
                     SCNTransaction.begin()
                     self.animateEnemy(node: node)
@@ -122,14 +125,18 @@ class ViewController: UIViewController {
             self.mTemp.text = String(self.counter)
             
             if self.counter <= 0{
-                if AppData.enemiesCounter <= 0{
+                if AppData.enemiesCounter[0] <= 0 && AppData.enemiesCounter[1] <= 0{
                     self.mTemp.text = "HAS PERDIDO :("
                     self.removeEnemies()
                     self.mRestart.isEnabled = true
+                    self.mPlay.isEnabled = true
                     return .stop
                 }else{
-                    self.mTemp.text = "ENEMIGOS: \(AppData.enemiesCounter)"
+                    self.mTemp.text = "BIEN, HAS GANADO :)"
+                    self.jellyfishText.text = "Jellyfish: \(AppData.enemiesCounter[0])"
+                    self.bascketballText.text = "Bascketball: \(AppData.enemiesCounter[1])"
                     self.mRestart.isEnabled = true
+                    self.mPlay.isEnabled = true
                     self.removeEnemies()
                 }
             }
@@ -140,14 +147,16 @@ class ViewController: UIViewController {
     
     func restartTime(){
         self.counter = 10
-        self.mTemp.text = "JUGAR"
     }
     
     @IBAction func restartAction(_ sender: Any) {
         self.removeEnemies()
-        AppData.enemiesCounter = 0
-        self.mPlay.isEnabled = true
+        
+        AppData.enemiesCounter[0] = 0
+        AppData.enemiesCounter[1] = 0
+        
         self.mRestart.isEnabled = false
+        self.mTemp.text = "VOLVER A JUGAR"
         
         self.restartTime()
     }
@@ -163,7 +172,7 @@ class ViewController: UIViewController {
 
 struct AppData {
     static let name: String = "enemy"
-    static var enemiesCounter: Int = 0
+    static var enemiesCounter: [Int] = [0, 0]
     static let enemies: [String] = ["art.scnassets/Jellyfish.scn", "art.scnassets/basketball_DAE.scn"]
     static let nameEnemies: [String] = ["Sphere", "BasketballBall"]
     static var indexEnemy: Int = -1

@@ -51,6 +51,26 @@
                                     <action selector="restartAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZk-P1-dJ6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jellyfish: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-fW-bKu">
+                                <rect key="frame" x="20" y="140" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KDS-jP-Aic"/>
+                                    <constraint firstAttribute="width" constant="374" id="zhL-pi-Vik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bascketball:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlU-aJ-xcN">
+                                <rect key="frame" x="20" y="185" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="27n-26-pGU"/>
+                                    <constraint firstAttribute="height" constant="21" id="kil-yC-fcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -58,16 +78,22 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GfN-Du-WuW" secondAttribute="trailing" constant="20" id="FUh-Ml-Y1C"/>
                             <constraint firstItem="dJ0-H8-ojn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IZT-Tz-SUy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GfN-Du-WuW" secondAttribute="bottom" constant="30" id="cIv-D4-HIf"/>
+                            <constraint firstItem="hqG-fW-bKu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="cPd-JW-YrA"/>
                             <constraint firstItem="gW1-Jz-HdH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="fOf-K7-Htq"/>
+                            <constraint firstItem="dJ0-H8-ojn" firstAttribute="top" secondItem="XlU-aJ-xcN" secondAttribute="bottom" constant="8" id="hyx-C8-dgl"/>
                             <constraint firstItem="gW1-Jz-HdH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="lhA-TQ-JmA"/>
+                            <constraint firstItem="hqG-fW-bKu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nbx-7M-5sy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="phv-n8-pRh" secondAttribute="bottom" constant="30" id="qp9-xh-sLs"/>
                             <constraint firstItem="dJ0-H8-ojn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="se0-Ns-8yg"/>
+                            <constraint firstItem="XlU-aJ-xcN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tSv-p7-xDj"/>
                             <constraint firstItem="phv-n8-pRh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="u8c-NZ-VyU"/>
                             <constraint firstItem="dJ0-H8-ojn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="uuG-D6-D6D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bascketballText" destination="XlU-aJ-xcN" id="rgf-Q6-UNk"/>
+                        <outlet property="jellyfishText" destination="hqG-fW-bKu" id="5f2-rN-R4W"/>
                         <outlet property="mPlay" destination="phv-n8-pRh" id="dj0-SC-Xid"/>
                         <outlet property="mRestart" destination="GfN-Du-WuW" id="0fb-xd-B9x"/>
                         <outlet property="mSceneview" destination="dJ0-H8-ojn" id="Em6-w7-50T"/>
