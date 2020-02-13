@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB186E3795E1436C02F8D9A7 /* Pods_DAM_IOS_Whack_Jellyfish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAB6ADAF39A06BFE2F08758 /* Pods_DAM_IOS_Whack_Jellyfish.framework */; };
+		C104F0E923F5987A001E6402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C104F0E823F5987A001E6402 /* AppDelegate.swift */; };
+		C104F0EB23F5987A001E6402 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C104F0EA23F5987A001E6402 /* SceneDelegate.swift */; };
+		C104F0ED23F5987A001E6402 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C104F0EC23F5987A001E6402 /* ViewController.swift */; };
+		C104F0F023F5987A001E6402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C104F0EE23F5987A001E6402 /* Main.storyboard */; };
+		C104F0F223F5987B001E6402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C104F0F123F5987B001E6402 /* Assets.xcassets */; };
+		C104F0F523F5987B001E6402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C104F0F323F5987B001E6402 /* LaunchScreen.storyboard */; };
+		C104F0FD23F5A0C1001E6402 /* Jellyfish.dae in Resources */ = {isa = PBXBuildFile; fileRef = C104F0FC23F5A0C1001E6402 /* Jellyfish.dae */; };
+		C104F0FF23F5A284001E6402 /* Jellyfish.png in Resources */ = {isa = PBXBuildFile; fileRef = C104F0FE23F5A284001E6402 /* Jellyfish.png */; };
+		C104F10323F5A451001E6402 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C104F10223F5A451001E6402 /* art.scnassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C2883766C2BBA752B483B10 /* Pods-DAM_IOS_Whack_Jellyfish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAM_IOS_Whack_Jellyfish.release.xcconfig"; path = "Target Support Files/Pods-DAM_IOS_Whack_Jellyfish/Pods-DAM_IOS_Whack_Jellyfish.release.xcconfig"; sourceTree = "<group>"; };
+		2F124741FB95B7FB60130722 /* Pods-DAM_IOS_Whack_Jellyfish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAM_IOS_Whack_Jellyfish.debug.xcconfig"; path = "Target Support Files/Pods-DAM_IOS_Whack_Jellyfish/Pods-DAM_IOS_Whack_Jellyfish.debug.xcconfig"; sourceTree = "<group>"; };
+		3BAB6ADAF39A06BFE2F08758 /* Pods_DAM_IOS_Whack_Jellyfish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DAM_IOS_Whack_Jellyfish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C104F0E523F59879001E6402 /* DAM_IOS_Whack_Jellyfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DAM_IOS_Whack_Jellyfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C104F0E823F5987A001E6402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C104F0EA23F5987A001E6402 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C104F0EC23F5987A001E6402 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C104F0EF23F5987A001E6402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C104F0F123F5987B001E6402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C104F0F423F5987B001E6402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C104F0F623F5987B001E6402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C104F0FC23F5A0C1001E6402 /* Jellyfish.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Jellyfish.dae; sourceTree = "<group>"; };
+		C104F0FE23F5A284001E6402 /* Jellyfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jellyfish.png; sourceTree = "<group>"; };
+		C104F10223F5A451001E6402 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C104F0E223F59879001E6402 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB186E3795E1436C02F8D9A7 /* Pods_DAM_IOS_Whack_Jellyfish.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AEF103D7EF3F889F5E0E540 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F124741FB95B7FB60130722 /* Pods-DAM_IOS_Whack_Jellyfish.debug.xcconfig */,
+				0C2883766C2BBA752B483B10 /* Pods-DAM_IOS_Whack_Jellyfish.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		52BDC5DD543FF9E8597E72B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BAB6ADAF39A06BFE2F08758 /* Pods_DAM_IOS_Whack_Jellyfish.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C104F0DC23F59879001E6402 = {
+			isa = PBXGroup;
+			children = (
+				C104F0FC23F5A0C1001E6402 /* Jellyfish.dae */,
+				C104F0FE23F5A284001E6402 /* Jellyfish.png */,
+				C104F0E723F59879001E6402 /* DAM_IOS_Whack_Jellyfish */,
+				C104F0E623F59879001E6402 /* Products */,
+				3AEF103D7EF3F889F5E0E540 /* Pods */,
+				52BDC5DD543FF9E8597E72B7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C104F0E623F59879001E6402 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C104F0E523F59879001E6402 /* DAM_IOS_Whack_Jellyfish.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C104F0E723F59879001E6402 /* DAM_IOS_Whack_Jellyfish */ = {
+			isa = PBXGroup;
+			children = (
+				C104F0E823F5987A001E6402 /* AppDelegate.swift */,
+				C104F0EA23F5987A001E6402 /* SceneDelegate.swift */,
+				C104F0EC23F5987A001E6402 /* ViewController.swift */,
+				C104F0EE23F5987A001E6402 /* Main.storyboard */,
+				C104F0F123F5987B001E6402 /* Assets.xcassets */,
+				C104F0F323F5987B001E6402 /* LaunchScreen.storyboard */,
+				C104F0F623F5987B001E6402 /* Info.plist */,
+				C104F10223F5A451001E6402 /* art.scnassets */,
+			);
+			path = DAM_IOS_Whack_Jellyfish;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C104F0E423F59879001E6402 /* DAM_IOS_Whack_Jellyfish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C104F0F923F5987B001E6402 /* Build configuration list for PBXNativeTarget "DAM_IOS_Whack_Jellyfish" */;
+			buildPhases = (
+				FDBE7ADC1442046FAB594B5B /* [CP] Check Pods Manifest.lock */,
+				C104F0E123F59879001E6402 /* Sources */,
+				C104F0E223F59879001E6402 /* Frameworks */,
+				C104F0E323F59879001E6402 /* Resources */,
+				AB53715341281F62A858B26D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DAM_IOS_Whack_Jellyfish;
+			productName = DAM_IOS_Whack_Jellyfish;
+			productReference = C104F0E523F59879001E6402 /* DAM_IOS_Whack_Jellyfish.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C104F0DD23F59879001E6402 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Raul Ramirez";
+				TargetAttributes = {
+					C104F0E423F59879001E6402 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C104F0E023F59879001E6402 /* Build configuration list for PBXProject "DAM_IOS_Whack_Jellyfish" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C104F0DC23F59879001E6402;
+			productRefGroup = C104F0E623F59879001E6402 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C104F0E423F59879001E6402 /* DAM_IOS_Whack_Jellyfish */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C104F0E323F59879001E6402 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C104F0FF23F5A284001E6402 /* Jellyfish.png in Resources */,
+				C104F0F523F5987B001E6402 /* LaunchScreen.storyboard in Resources */,
+				C104F0F223F5987B001E6402 /* Assets.xcassets in Resources */,
+				C104F10323F5A451001E6402 /* art.scnassets in Resources */,
+				C104F0F023F5987A001E6402 /* Main.storyboard in Resources */,
+				C104F0FD23F5A0C1001E6402 /* Jellyfish.dae in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB53715341281F62A858B26D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DAM_IOS_Whack_Jellyfish/Pods-DAM_IOS_Whack_Jellyfish-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DAM_IOS_Whack_Jellyfish/Pods-DAM_IOS_Whack_Jellyfish-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DAM_IOS_Whack_Jellyfish/Pods-DAM_IOS_Whack_Jellyfish-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDBE7ADC1442046FAB594B5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DAM_IOS_Whack_Jellyfish-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C104F0E123F59879001E6402 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C104F0ED23F5987A001E6402 /* ViewController.swift in Sources */,
+				C104F0E923F5987A001E6402 /* AppDelegate.swift in Sources */,
+				C104F0EB23F5987A001E6402 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C104F0EE23F5987A001E6402 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C104F0EF23F5987A001E6402 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C104F0F323F5987B001E6402 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C104F0F423F5987B001E6402 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C104F0F723F5987B001E6402 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C104F0F823F5987B001E6402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C104F0FA23F5987B001E6402 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F124741FB95B7FB60130722 /* Pods-DAM_IOS_Whack_Jellyfish.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DTLRHN6WR;
+				INFOPLIST_FILE = DAM_IOS_Whack_Jellyfish/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "escuela.estech.DAM-IOS-Whack-Jellyfish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C104F0FB23F5987B001E6402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C2883766C2BBA752B483B10 /* Pods-DAM_IOS_Whack_Jellyfish.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DTLRHN6WR;
+				INFOPLIST_FILE = DAM_IOS_Whack_Jellyfish/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "escuela.estech.DAM-IOS-Whack-Jellyfish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C104F0E023F59879001E6402 /* Build configuration list for PBXProject "DAM_IOS_Whack_Jellyfish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C104F0F723F5987B001E6402 /* Debug */,
+				C104F0F823F5987B001E6402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C104F0F923F5987B001E6402 /* Build configuration list for PBXNativeTarget "DAM_IOS_Whack_Jellyfish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C104F0FA23F5987B001E6402 /* Debug */,
+				C104F0FB23F5987B001E6402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C104F0DD23F59879001E6402 /* Project object */;
+}
