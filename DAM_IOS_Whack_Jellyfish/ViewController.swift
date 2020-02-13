@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playAction(_ sender: Any) {
-        AppData.enemies = 0
+        AppData.enemiesCounter = 0
         self.addNode()
         self.setTime()
         
@@ -45,18 +45,19 @@ class ViewController: UIViewController {
     }
     
     func addNode(){
-        let jellyScene = SCNScene(named: "art.scnassets/Jellyfish.scn")
-        let jellyfish = jellyScene?.rootNode.childNode(withName: "Sphere", recursively: false)
+        let index = Int.random(in: 0 ..< AppData.enemies.count)
+        let enemyScene = SCNScene(named: AppData.enemies[index])
+        let enemy = enemyScene?.rootNode.childNode(withName: AppData.nameEnemies[index], recursively: false)
         
         let x = self.randomNumbers(first: -1, second: 1)
         let y = self.randomNumbers(first: -1, second: 1)
         let z = self.randomNumbers(first: -1, second: 1)
         
-        jellyfish?.position = SCNVector3(x, y, z)
-        jellyfish?.name = AppData.name
-        jellyfish?.scale = SCNVector3(0.2, 0.2, 0.2)
+        enemy?.position = SCNVector3(x, y, z)
+        enemy?.name = AppData.name
+        enemy?.scale = SCNVector3(0.2, 0.2, 0.2)
         
-        self.mSceneview.scene.rootNode.addChildNode(jellyfish!)
+        self.mSceneview.scene.rootNode.addChildNode(enemy!)
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer){
@@ -67,11 +68,11 @@ class ViewController: UIViewController {
         if !hitTest.isEmpty{
             let node = hitTest.first!.node
             if AppData.name == node.name{
-                AppData.enemies += 1
+                AppData.enemiesCounter += 1
                 print(AppData.enemies)
                 if node.animationKeys.isEmpty, node.name != nil{
                     SCNTransaction.begin()
-                    self.animateJellyfish(node: node)
+                    self.animateEnemy(node: node)
                     SCNTransaction.completionBlock = {
                         node.removeFromParentNode()
                         self.addNode()
@@ -83,7 +84,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func animateJellyfish(node: SCNNode){
+    func animateEnemy(node: SCNNode){
         let spin = CABasicAnimation(keyPath: "position")
         spin.fromValue = node.presentation.position
         spin.toValue = SCNVector3(node.presentation.position.x - 0.2, node.presentation.position.y - 0.2 , node.presentation.position.z - 0.2)
@@ -103,7 +104,7 @@ class ViewController: UIViewController {
             self.mTemp.text = String(self.counter)
             
             if self.counter <= 0{
-                if AppData.enemies <= 0{
+                if AppData.enemiesCounter <= 0{
                     self.mTemp.text = "HAS PERDIDO :("
                     self.removeEnemies()
                     self.mRestart.isEnabled = true
@@ -126,12 +127,10 @@ class ViewController: UIViewController {
     
     @IBAction func restartAction(_ sender: Any) {
         self.removeEnemies()
-        AppData.enemies = 0
+        AppData.enemiesCounter = 0
         self.addNode()
         
         self.restartTime()
-        
-        
     }
     
     func removeEnemies(){
@@ -145,6 +144,8 @@ class ViewController: UIViewController {
 
 struct AppData {
     static let name: String = "enemy"
-    static var enemies: Int = 0
+    static var enemiesCounter: Int = 0
+    static let enemies: [String] = ["art.scnassets/Jellyfish.scn", "art.scnassets/basketball_DAE.scn"]
+    static let nameEnemies: [String] = ["Sphere", "BasketballBall"]
 }
 
