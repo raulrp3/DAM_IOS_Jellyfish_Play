@@ -45,9 +45,9 @@ class ViewController: UIViewController {
     }
     
     func addNode(){
-        let index = Int.random(in: 0 ..< AppData.enemies.count)
-        let enemyScene = SCNScene(named: AppData.enemies[index])
-        let enemy = enemyScene?.rootNode.childNode(withName: AppData.nameEnemies[index], recursively: false)
+        AppData.indexEnemy = Int.random(in: 0 ..< AppData.enemies.count)
+        let enemyScene = SCNScene(named: AppData.enemies[AppData.indexEnemy])
+        let enemy = enemyScene?.rootNode.childNode(withName: AppData.nameEnemies[AppData.indexEnemy], recursively: false)
         
         let x = self.randomNumbers(first: -1, second: 1)
         let y = self.randomNumbers(first: -1, second: 1)
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         
         enemy?.position = SCNVector3(x, y, z)
         enemy?.name = AppData.name
-        enemy?.scale = SCNVector3(0.2, 0.2, 0.2)
+        self.scaleEnemy(node: enemy!)
         
         self.mSceneview.scene.rootNode.addChildNode(enemy!)
     }
@@ -84,13 +84,31 @@ class ViewController: UIViewController {
         }
     }
     
+    func scaleEnemy(node: SCNNode){
+        if AppData.indexEnemy != 0{
+            node.scale = SCNVector3(0.4, 0.4, 0.4)
+        }else{
+            node.scale = SCNVector3(0.2, 0.2, 0.2)
+        }
+    }
+    
     func animateEnemy(node: SCNNode){
         let spin = CABasicAnimation(keyPath: "position")
         spin.fromValue = node.presentation.position
-        spin.toValue = SCNVector3(node.presentation.position.x - 0.2, node.presentation.position.y - 0.2 , node.presentation.position.z - 0.2)
-        spin.duration = 0.1
-        spin.autoreverses = true
-        spin.repeatCount = 5
+        
+        if AppData.indexEnemy != 0{
+            spin.toValue = SCNVector3(node.presentation.position.x, node.presentation.position.y - 0.5 , node.presentation.position.z - 0.2)
+            spin.duration = 0.1
+            spin.autoreverses = true
+            spin.repeatCount = 3
+
+        }else{
+            spin.toValue = SCNVector3(node.presentation.position.x - 0.2, node.presentation.position.y - 0.2 , node.presentation.position.z - 0.2)
+            spin.duration = 0.1
+            spin.autoreverses = true
+            spin.repeatCount = 5
+        }
+        
         node.addAnimation(spin, forKey: "position")
     }
     
@@ -110,7 +128,7 @@ class ViewController: UIViewController {
                     self.mRestart.isEnabled = true
                     return .stop
                 }else{
-                    self.mTemp.text = "ENEMIGOS: \(AppData.enemies)"
+                    self.mTemp.text = "ENEMIGOS: \(AppData.enemiesCounter)"
                     self.mRestart.isEnabled = true
                     self.removeEnemies()
                 }
@@ -122,13 +140,14 @@ class ViewController: UIViewController {
     
     func restartTime(){
         self.counter = 10
-        self.mTemp.text = String(self.counter)
+        self.mTemp.text = "JUGAR"
     }
     
     @IBAction func restartAction(_ sender: Any) {
         self.removeEnemies()
         AppData.enemiesCounter = 0
-        self.addNode()
+        self.mPlay.isEnabled = true
+        self.mRestart.isEnabled = false
         
         self.restartTime()
     }
@@ -147,5 +166,6 @@ struct AppData {
     static var enemiesCounter: Int = 0
     static let enemies: [String] = ["art.scnassets/Jellyfish.scn", "art.scnassets/basketball_DAE.scn"]
     static let nameEnemies: [String] = ["Sphere", "BasketballBall"]
+    static var indexEnemy: Int = -1
 }
 
